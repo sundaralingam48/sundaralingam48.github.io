@@ -5,355 +5,331 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sundaralingam Srinivasan | Data Science & AI Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
       line-height: 1.6;
     }
-
     header {
-      background: linear-gradient(135deg, #0f172a, #1e40af);
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
-      padding: 70px 20px;
+      padding: 56px 20px;
       text-align: center;
     }
-
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      margin: 0 0 12px;
+      font-size: 2.4rem;
     }
-
     header p {
-      font-size: 19px;
-      max-width: 900px;
-      margin: auto;
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: 1.05rem;
     }
-
     nav {
-      background: #0f172a;
-      padding: 15px;
+      background: #111827;
+      padding: 14px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-
     nav a {
       color: white;
+      text-decoration: none;
       margin: 0 14px;
-      text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
-
     section {
-      max-width: 1050px;
-      margin: 35px auto;
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 48px 20px;
     }
-
     h2 {
-      color: #1e40af;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 8px;
-    }
-
-    h3 {
       color: #0f172a;
-    }
-
-    .project, .experience-card {
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      background: #f9fafb;
-    }
-
-    .skills span {
+      border-bottom: 3px solid #2563eb;
       display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+    .about-box, .contact-box {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      border-top: 5px solid #2563eb;
+    }
+    .project-card h3 {
+      margin-top: 8px;
+      color: #111827;
+    }
+    .project-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
       background: #dbeafe;
-      color: #1e3a8a;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 20px;
-      font-size: 14px;
+      color: #1e40af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: bold;
     }
-
-    a {
-      color: #1d4ed8;
+    .domain {
+      color: #2563eb;
+      font-weight: bold;
     }
-
-    .button {
-      display: inline-block;
-      background: #1d4ed8;
+    .links {
+      margin-top: 18px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .links a, .button-link {
+      background: #2563eb;
       color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
+      padding: 10px 14px;
+      border-radius: 10px;
       text-decoration: none;
-      margin-top: 10px;
+      font-weight: bold;
+      display: inline-block;
     }
-
-    .button:hover {
-      background: #1e3a8a;
+    .links a:hover, .button-link:hover {
+      background: #1d4ed8;
     }
-
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .skill {
+      background: #e0f2fe;
+      color: #075985;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
     footer {
-      text-align: center;
-      padding: 25px;
       background: #0f172a;
       color: white;
+      text-align: center;
+      padding: 24px;
       margin-top: 40px;
     }
   </style>
 </head>
-
 <body>
-
   <header>
     <h1>Sundaralingam Srinivasan</h1>
-    <p>
-      Principal Application Engineer | Data Science & AI Portfolio |
-      Java, Spring Boot, React, Kafka, Redis, AWS, Google Cloud, OpenShift,
-      Python, Machine Learning, and Business-Driven Analytics
-    </p>
+    <p>Principal Application Engineer | Data Science & AI Portfolio | Java, Spring Boot, React, Kafka, Redis, AWS, Google Cloud, OpenShift, Python, Machine Learning, and Business-Driven Analytics</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#projects">Work/Projects</a>
+    <a href="#work">Work/Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About</h2>
-    <p>
-      I am a Principal Application Engineer and data science professional with
-      extensive experience in the banking and finance domain. My background includes
-      software engineering, cloud technologies, full-stack application development,
-      data wrangling, machine learning, and AI-driven analytics. I have worked on
-      complex enterprise systems using Java, Spring Boot, React, Angular, Kafka,
-      Redis, AWS, Google Cloud, OpenShift, RESTful Web Services, NoSQL databases,
-      and rule engines.
-    </p>
-
-    <p>
-      This portfolio is designed to present my public-facing professional brand for
-      data science, AI, machine learning, and analytics roles. My goal is to show
-      employers that I can connect strong engineering experience with data science
-      methods to solve real-world business problems. I can work across the full
-      project lifecycle, including requirement gathering, design, development,
-      testing, deployment, data preparation, model building, evaluation, and
-      communication of results.
-    </p>
-
-    <p>
-      I am especially interested in using data science and AI to improve business
-      decision-making, automate manual processes, detect patterns, reduce risk, and
-      create measurable value for organizations.
-    </p>
+    <div class="about-box">
+      <p>I am a Principal Application Engineer and data science professional with extensive experience in banking, finance, software engineering, cloud technologies, full-stack application development, data wrangling, machine learning, and AI-driven analytics.</p>
+      <p>This portfolio presents my professional brand for data science, AI, machine learning, analytics, and software engineering roles. My goal is to show employers that I can connect enterprise engineering experience with data science methods to solve real-world business problems.</p>
+      <p>I am especially interested in using data science and AI to improve business decision-making, automate manual processes, detect patterns, reduce risk, improve customer experience, and create measurable business value.</p>
+      <p><a class="button-link" href="https://github.com/sundaralingam48/sundaralingam48.github.io" target="_blank" rel="noopener">View Main GitHub Repository</a></p>
+    </div>
   </section>
 
-  <section id="projects">
+  <section id="work">
     <h2>Work / Projects</h2>
+    <p>The following projects demonstrate end-to-end data science skills, including business problem framing, data preparation, exploratory analysis, modeling, evaluation, interpretation, and communication of results. Each project includes a repository or notebook link for detailed code review.</p>
+    <div class="project-grid">
+      
+<article class="project-card">
+  <div class="project-number">01</div>
+  <h3>Agentic AI for Banking Customer Experience</h3>
+  <p class="domain">Banking AI</p>
+  <p>This project builds an agentic AI-style banking support workflow that classifies customer requests, predicts the best service route, estimates priority, and generates a clear customer-facing response.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Scikit-learn, Classification, AI Workflow, Banking Analytics</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/Agentic-AI-for-Banking-Customer-Experience" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/01_agentic_ai_banking_customer_experience/01_agentic_ai_banking_customer_experience.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
 
-    <div class="project">
-      <h3>House Price Prediction Using Machine Learning</h3>
-      <p>
-        This project uses housing data to predict home sale prices through a machine
-        learning workflow. The project includes data exploration, preprocessing,
-        feature engineering, model training, model comparison, and evaluation. It
-        demonstrates how machine learning can support real estate pricing decisions,
-        forecasting, and business analytics.
-      </p>
-      <p>
-        <strong>Tools & Skills:</strong> Python, Pandas, Scikit-learn, Matplotlib,
-        Machine Learning, Regression, Random Forest, Model Evaluation.
-      </p>
-      <a class="button" href="https://github.com/sundaralingam48/house-price-prediction-ml" target="_blank">
-        View GitHub Repository
-      </a>
-    </div>
 
-    <div class="project">
-      <h3>Data Wrangling Project</h3>
-      <p>
-        This project focuses on collecting, cleaning, transforming, and combining
-        data from multiple sources. It highlights one of the most important parts
-        of data science: preparing reliable data before analysis or modeling. This
-        project demonstrates practical data cleaning, integration, and validation
-        skills.
-      </p>
-      <p>
-        <strong>Tools & Skills:</strong> Python, Pandas, APIs, Web Scraping,
-        CSV Files, BeautifulSoup, Data Cleaning, Data Integration.
-      </p>
-      <a class="button" href="https://github.com/sundaralingam48/Data-wrangling" target="_blank">
-        View GitHub Repository
-      </a>
+<article class="project-card">
+  <div class="project-number">02</div>
+  <h3>Credit Risk Prediction</h3>
+  <p class="domain">Finance / Risk</p>
+  <p>This project predicts credit risk using income, credit score, utilization, debt-to-income ratio, payment history, and loan amount.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Scikit-learn, Logistic Regression, Random Forest, Risk Analytics</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/02_credit_risk_prediction" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/02_credit_risk_prediction/02_credit_risk_prediction.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">03</div>
+  <h3>Customer Churn Prediction</h3>
+  <p class="domain">Customer Analytics</p>
+  <p>This project predicts customer churn using tenure, monthly charges, satisfaction, support tickets, logins, and product usage.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Classification, Customer Analytics, Model Evaluation</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/03_customer_churn_prediction" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/03_customer_churn_prediction/03_customer_churn_prediction.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">04</div>
+  <h3>Fraud Detection in Transactions</h3>
+  <p class="domain">Fraud Analytics</p>
+  <p>This project builds a fraud detection model using transaction amount, merchant risk, transaction time, foreign transaction status, location mismatch, and short-term account activity.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Fraud Detection, Classification, Confusion Matrix, Precision/Recall</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/04_fraud_detection_transactions" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/04_fraud_detection_transactions/04_fraud_detection_transactions.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">05</div>
+  <h3>Stock Price Feature Modeling</h3>
+  <p class="domain">Time Series / Finance</p>
+  <p>This project creates moving averages, returns, volatility, momentum, and volume-change features to predict whether the next trading day closes higher.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Time Series, Feature Engineering, Financial Analytics</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/05_stock_price_feature_modeling" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/05_stock_price_feature_modeling/05_stock_price_feature_modeling.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">06</div>
+  <h3>Housing Price Prediction</h3>
+  <p class="domain">Real Estate Analytics</p>
+  <p>This project predicts housing prices using square footage, rooms, bathrooms, age, property quality, and neighborhood score.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Regression, Random Forest, RMSE, Real Estate Analytics</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/house-price-prediction-ml" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/06_housing_price_prediction/06_housing_price_prediction.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">07</div>
+  <h3>Delivery Delay Prediction</h3>
+  <p class="domain">Logistics Analytics</p>
+  <p>This project predicts delivery delays using distance, carrier score, weather risk, package weight, warehouse processing time, and traffic conditions.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Logistics Analytics, Classification, Business Recommendations</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/07_delivery_delay_prediction" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/07_delivery_delay_prediction/07_delivery_delay_prediction.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">08</div>
+  <h3>TSA Complaints Analysis</h3>
+  <p class="domain">Public Sector Analytics</p>
+  <p>This project studies TSA-style complaint data and predicts whether a complaint is likely to be escalated.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Public Data, Classification, Data Storytelling</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/08_tsa_complaints_analysis" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/08_tsa_complaints_analysis/08_tsa_complaints_analysis.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">09</div>
+  <h3>Netflix Top 10 Storytelling Analysis</h3>
+  <p class="domain">Entertainment Analytics</p>
+  <p>This project uses viewing weeks, rank, genre, release type, release age, and weekly views to identify titles likely to stay in the Top 10 longer.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, EDA, Storytelling, Classification, Visualization</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/09_netflix_top10_storytelling" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/09_netflix_top10_storytelling/09_netflix_top10_storytelling.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
+
+<article class="project-card">
+  <div class="project-number">10</div>
+  <h3>Childcare Price Analysis</h3>
+  <p class="domain">Social / Economic Analytics</p>
+  <p>This project analyzes childcare affordability using median income, infant care cost, preschool cost, employment rate, population density, and single-parent household rate.</p>
+  <p><strong>Tools & Skills:</strong> Python, Pandas, Regression, Social Analytics, Data Visualization</p>
+  <div class="links">
+    <a href="https://github.com/sundaralingam48/sundaralingam48.github.io/tree/main/projects/10_childcare_price_analysis" target="_blank" rel="noopener">View Repository</a>
+    <a href="projects/10_childcare_price_analysis/10_childcare_price_analysis.ipynb" target="_blank" rel="noopener">View Notebook</a>
+  </div>
+</article>
+
     </div>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
     <div class="skills">
-      <span>Java</span>
-      <span>JDK 21</span>
-      <span>Spring Boot</span>
-      <span>React</span>
-      <span>Angular</span>
-      <span>Node.js</span>
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Pandas</span>
-      <span>Scikit-learn</span>
-      <span>Machine Learning</span>
-      <span>Data Wrangling</span>
-      <span>Data Visualization</span>
-      <span>AWS</span>
-      <span>Google Cloud</span>
-      <span>Associate Cloud Engineer</span>
-      <span>OpenShift / OCP</span>
-      <span>Docker</span>
-      <span>Kafka</span>
-      <span>Redis</span>
-      <span>NoSQL</span>
-      <span>RESTful Web Services</span>
-      <span>Rule Engine</span>
-      <span>Alfresco BPMN</span>
-      <span>Agile</span>
-      <span>SDLC</span>
-      <span>AI</span>
-      <span>Business Analytics</span>
+      <span class="skill">Python</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">Scikit-learn</span>
+      <span class="skill">Machine Learning</span>
+      <span class="skill">Data Wrangling</span>
+      <span class="skill">Data Visualization</span>
+      <span class="skill">Java</span>
+      <span class="skill">Spring Boot</span>
+      <span class="skill">React</span>
+      <span class="skill">SQL</span>
+      <span class="skill">AWS</span>
+      <span class="skill">Google Cloud</span>
+      <span class="skill">OpenShift</span>
+      <span class="skill">Kafka</span>
+      <span class="skill">Redis</span>
+      <span class="skill">REST APIs</span>
     </div>
-  </section>
-
-  <section id="experience">
-    <h2>Professional Experience</h2>
-
-    <div class="experience-card">
-      <h3>Capital One</h3>
-      <p><strong>Principal Application Engineer</strong> | December 2025 - Present</p>
-      <p>
-        Working as a Principal Application Engineer with a focus on enterprise
-        application development, cloud technologies, software modernization, and
-        business-driven technology solutions.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <h3>Discover Financial Services</h3>
-      <p><strong>Principal Application Engineer / Application Engineer</strong> | August 2021 - December 2025</p>
-      <p>
-        Developed, maintained, and enhanced complex software systems in the banking
-        and finance domain. Applied Java, Spring Boot, React, cloud platforms,
-        Kafka, Redis, OpenShift, REST services, and agile delivery practices to
-        support business-critical applications.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <h3>PNC</h3>
-      <p><strong>Senior Software Developer</strong> | August 2018 - August 2021</p>
-      <p>
-        Supported application development and enhancement efforts in the financial
-        services industry, contributing to enterprise software solutions and
-        production support activities.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <h3>Wipro Limited</h3>
-      <p><strong>Technical Lead</strong> | April 2016 - August 2018</p>
-      <p>
-        Led development activities using Java, Angular, Node.js, Spring, Cassandra,
-        AWS, SNS/SQS, and Apache Kafka. Participated in sprint planning, requirement
-        gathering, environment setup, and knowledge transition.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <h3>Cognizant Technology Solutions</h3>
-      <p><strong>Associate</strong> | October 2010 - April 2016</p>
-      <p>
-        Worked on analysis, design, development, testing, deployment, performance
-        improvement, documentation, code review, estimation, and team coordination
-        for enterprise applications.
-      </p>
-    </div>
-
-    <div class="experience-card">
-  <h3>Patni Computer Systems Ltd</h3>
-  <p><strong>Software Engineer</strong> | January 2008 - October 2010</p>
-  <p>
-    Worked as a software developer in Chennai, Tamil Nadu, India. Responsibilities
-    included analysis, design, coding, defect fixing, unit testing, code review,
-    and deployment. This role helped build a strong foundation in software
-    engineering, application development, and delivery practices.
-  </p>
-</div>
-  </section>
-
-  <section id="education">
-    <h2>Education & Certifications</h2>
-    <p>
-      <strong>Master of Science in Data Science</strong><br>
-      Bellevue University
-    </p>
-
-    <p>
-      <strong>Bachelor of Engineering in Computer Science</strong><br>
-      Dr. Sivanthi Aditanar College of Engineering
-    </p>
-
-    <p>
-      <strong>Certifications:</strong> Associate Cloud Engineer Certification,
-      Verified International Academic Qualifications
-    </p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>
-      I welcome opportunities related to data science, AI, machine learning,
-      analytics, software engineering, cloud engineering, and enterprise application
-      development.
-    </p>
-
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:sundaralingam48@gmail.com">sundaralingam48@gmail.com</a>
-    </p>
-
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/sundaralingam48" target="_blank">
-        github.com/sundaralingam48
-      </a>
-    </p>
-
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/sundaralingam-srinivasan-111439b0/" target="_blank">
-        linkedin.com/in/sundaralingam-srinivasan-111439b0
-      </a>
-    </p>
-
-    <p>
-      <strong>Portfolio:</strong>
-      <a href="https://sundaralingam48.github.io/" target="_blank">
-        sundaralingam48.github.io
-      </a>
-    </p>
+    <div class="contact-box">
+      <p>I welcome opportunities related to data science, AI, machine learning, analytics, software engineering, cloud engineering, and enterprise application development.</p>
+      <p><strong>Email:</strong> sundaralingam48@gmail.com</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/sundaralingam48" target="_blank" rel="noopener">github.com/sundaralingam48</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sundaralingam-srinivasan-111439b0" target="_blank" rel="noopener">linkedin.com/in/sundaralingam-srinivasan-111439b0</a></p>
+      <p><strong>Portfolio:</strong> <a href="https://sundaralingam48.github.io/" target="_blank" rel="noopener">sundaralingam48.github.io</a></p>
+    </div>
   </section>
 
   <footer>
     <p>© 2026 Sundaralingam Srinivasan | Data Science & AI Portfolio</p>
   </footer>
-
 </body>
 </html>
